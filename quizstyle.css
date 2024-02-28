@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: #9f6a96; Pinkish background color */
+}
+.responsiveImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("new.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.container {
+    /* margin-top: 200vh; */
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.question {
+    display: none; /* Initially hide all questions */
+    background-color: #ebf0ec96; /* Light gray background */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 12vh;
+}
+.options {
+    list-style-type: none;
+    padding: 0;
+    
+    
+}
+.option-label{
+    background-color: #f8f8f8; /* Light gray background */
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+
+}
+.options li {
+    background-color: #f8f8f8; /* Light gray background */
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.question-numbers {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    margin-left: 25vw;
+    bottom: 7%;
+    margin-top: 5px;
+    left: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+.question-numbers li {
+    /* display: inline-block; */
+    /* margin-left: 30vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 50%;
+    /* text-align: center; */
+    /* margin-right: 20px;
+     */
+     
+    cursor: pointer;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+#submit-btn {
+    display: none;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 17px;
+    cursor: pointer;
+}
+.answer{
+    border-radius: 10px;
+    cursor: pointer;
+}
+.nav-buttons{
+    
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    text-align: center;
+}
+.nav-button{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 27px;
+    margin-bottom: 15px;
+    cursor:pointer;
+}
+/* Your existing CSS styles */
+
+/* @media screen and (max-width: 700px) {
+    .question-numbers {
+        position: absolute;
+        bottom: 15%; /* Adjust the positioning for all question numbers */
+    /* }
+
+    .question-numbers li:nth-child(n+6) {
+        position: absolute;
+        bottom: 8%; /* Adjust the positioning for question numbers 6 to 10 */
+    /* } */
+/* } */ 
+/* CSS to style the radio buttons and labels */

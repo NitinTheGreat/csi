@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden; /* Prevent SVGs from overflowing */
+        }
+
+        .svg {
+            position: absolute;
+            cursor: move; /* Change cursor on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="svg svg-top-left">
+            <img src="1.svg" alt="My Happy SVG"/>
+        </div>
+        <div class="svg svg-top-right">
+            <img src="2.svg" alt="My Happy SVG"/>
+        </div>
+        <div class="svg svg-bottom-left">
+            <img src="3.svg" alt="My Happy SVG"/>
+        </div>
+        <div class="svg svg-bottom-right">
+            <img src="4.svg" alt="My Happy SVG"/>
+        </div>
+        <div class="responsiveImg"></div>
+        <div class="button-wrapper">
+            <div class="button">
+                <a href="quiz.html">Click To Play</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let offsetX, offsetY, dragItem;
+
+            function handleDragStart(e) {
+                dragItem = this;
+                offsetX = e.clientX - dragItem.getBoundingClientRect().left;
+                offsetY = e.clientY - dragItem.getBoundingClientRect().top;
+                window.addEventListener("mousemove", handleDrag);
+                window.addEventListener("mouseup", handleDragEnd);
+            }
+
+            function handleDrag(e) {
+                e.preventDefault();
+                if (dragItem) {
+                    let posX = e.clientX - offsetX;
+                    let posY = e.clientY - offsetY;
+                    dragItem.style.left = posX + "px";
+                    dragItem.style.top = posY + "px";
+                }
+            }
+
+            function handleDragEnd() {
+                dragItem = null;
+                window.removeEventListener("mousemove", handleDrag);
+                window.removeEventListener("mouseup", handleDragEnd);
+            }
+
+            const draggables = document.querySelectorAll(".svg");
+            draggables.forEach(item => {
+                item.addEventListener("mousedown", handleDragStart);
+            });
+        });
+    </script>
+</body>
+</html>

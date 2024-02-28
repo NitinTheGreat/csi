@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Page</title>
+<link rel="stylesheet" href="quizstyle.css">
+</head>
+<body>
+    <div class="responsiveImg"></div>
+<div class="container">
+    <!-- Questions -->
+    <div class="question" id="question1">
+        <h2>Question 1:</h2>
+        <p>This is the first question.</p>
+        <ul class="options">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+        </ul>
+        <button class="answer" onclick="submitAnswer(1)">Submit</button>
+    </div>
+    <!-- Repeat the above question structure for remaining questions -->
+    <div class="question" id="question2">
+        <h2>Question 2:</h2>
+        <p>This is the second question.</p>
+        <ul class="options">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+        </ul>
+        <button class="answer" onclick="submitAnswer(2)">Submit</button>
+    </div>
+    <div class="question" id="question3">
+        <h2>Question 3:</h2>
+        <p>This is the third question.</p>
+        <ul class="options">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+        </ul>
+        <button class="answer" onclick="submitAnswer(3)">Submit</button>
+    </div>
+    <div class="question" id="question4">
+        <h2>Question 4:</h2>
+        <p>This is the fourth question.</p>
+        <ul class="options">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+        </ul>
+        <button class="answer" onclick="submitAnswer(4)">Submit</button>
+    </div>
+    <div class="question" id="question5">
+        <h2>Question 5:</h2>
+        <p>This is the fifth question.</p>
+        <ul class="options">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+        </ul>
+        <button class="answer" onclick="submitAnswer(5)">Submit</button>
+    </div>
+    <div class="question" id="question6">
+        <h2>Question 6:</h2>
+        <p>This is the sixth question.</p>
+        <ul class="options">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+        </ul>
+        <button class="answer" onclick="submitAnswer(6)">Submit</button>
+    </div>
+    <div class="question" id="question7">
+        <h2>Question 7:</h2>
+        <p>This is the seventh question.</p>
+        <ul class="options">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+        </ul>
+        <button class="answer" onclick="submitAnswer(7)">Submit</button>
+    </div>
+    <div class="question" id="question8">
+        <h2>Question 8:</h2>
+        <p>This is the eigth question.</p>
+        <ul class="options">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+        </ul>
+        <button class="answer" onclick="submitAnswer(8)">Submit</button>
+    </div>
+    <div class="question" id="question9">
+        <h2>Question 9:</h2>
+        <p>This is the ninth question.</p>
+        <div class="question" id="question9">
+            <h2>Question 9:</h2>
+            <p>This is the ninth question.</p>
+            <form class="options">
+                <label class="option-label"><input type="radio" name="question9Option" value="1"> Option 1</label><br>
+                <label class="option-label"><input type="radio" name="question9Option" value="2"> Option 2</label><br>
+                <label class="option-label"><input type="radio" name="question9Option" value="3"> Option 3</label><br>
+                <label class="option-label"><input type="radio" name="question9Option" value="4"> Option 4</label><br>
+            </form>
+        </div>
+        
+        <button class="answer" onclick="submitAnswer(9)">Submit</button>
+    </div>
+    <div class="question" id="question10">
+        <h2>Question 10:</h2>
+        <p>This is the tenth question.</p>
+        <ul class="options">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+            <li>Option 4</li>
+        </ul>
+        <button class="answer" onclick="submitAnswer(10)">Submit</button>
+    </div>
+
+    <!-- Question numbers at the bottom -->
+    <ul class="question-numbers">
+        <li onclick="showQuestion(1)">1</li>
+        <li onclick="showQuestion(2)">2</li>
+        <li onclick="showQuestion(3)">3</li>
+        <li onclick="showQuestion(4)">4</li>
+        <li onclick="showQuestion(5)">5</li>
+        <li onclick="showQuestion(6)">6</li>
+        <li onclick="showQuestion(7)">7</li>
+        <li onclick="showQuestion(8)">8</li>
+        <li onclick="showQuestion(9)">9</li>
+        <li onclick="showQuestion(10)">10</li>
+        <!-- Repeat for remaining question numbers -->
+    </ul>
+    
+    <!-- Permanent submit button -->
+    <button id="submit-btn" onclick="submitTest()">Submit Test</button>
+    <!-- Next and Previous Buttons
+     -->
+     <div class="nav-buttons">
+        <button class="nav-button" onclick="showNextQuestion()">Next</button>
+        <button class="nav-button" onclick="showPreviousQuestion()">Previous</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
